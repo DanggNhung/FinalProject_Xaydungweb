@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-4c7PtoQyxp9ihvo9ap+J8m4euLtApQVksKJtM4f8vJFUOFqn9FdwAf2zABm1Xo5M" crossorigin="anonymous">
+	<style>
+	body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+header {
+    background-color: #405de6;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+	width: 300px;
+}
+
+.search-bar button {
+    background-color: #405de6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #6e7dff;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.post-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-content {
+    margin-top: 10px;
+}
+
+.post-actions button {
+    margin-right: 10px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #405de6;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.post-actions button:hover {
+    background-color: #6e7dff;
+}
+.add-icon-btn {
+    background-color: #6e7dff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 8px 20px;
+    transition: background-color 0.3s;
+}
+
+.add-icon-btn:hover {
+    background-color: #405de6;
+}
+
+.upload-media-btn {
+    background-color: #6e7dff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 8px 20px;
+    transition: background-color 0.3s;
+}
+
+.upload-media-btn:hover {
+    background-color: #6e7dff;
+}
+
+.hidden {
+    display: none;
+}
+
+.notification-panel {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px; /* Adjust based on your header height */
+    right: 20px; /* Adjust based on your preference */
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.notification:last-child {
+    margin-bottom: 0;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message {
+    flex: 1;
+}
+
+.message strong {
+    color: #555;
+}
+
+.time {
+    display: block;
+    color: #999;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+#closeButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+</style>
+
+    <title>Tên web</title>
+</head>
+<body>
+    <header>
+        <h1>Mạng xã hội</h1>
+		<div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm...">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="homeLink">Trang chủ</a></li>
+                <li><a href="notifications.html">Thông báo</a></li>
+				<li><a href="message-box" id="messageLink">Tin nhắn</a><li>
+                <li><a href="profile.html">Hồ sơ</a></li>
+                <li><a href="logout.html">Đăng xuất</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+	<div id="notificationPanel" class="notification-panel hidden">
+        <h1>Thông báo</h1>
+        <button id="closeButton">Đóng</button>
+    </div>
+
+    <main>
+		<div class="post">
+			<div class="post-header">
+				<h2>Bạn đang nghĩ gì? </h2>
+			</div>
+			<div class="post-content">
+				<p>Hãy chia sẻ cảm xúc của bạn ...</p>
+				 <button class="add-icon-btn"><i class="fas fa-plus-circle"></i> Thêm icon</button>
+				 <button class="upload-media-btn"><i class="fas fa-upload"></i> Đăng ảnh/video</button>
+			</div>
+		</div>
+			
+			
+        <div class="post">
+            <div class="post-header">
+                <img src="C:\Users\SV\Downloads\pam.jpg">
+                <h2>Tên người dùng</h2>
+            </div>
+            <div class="post-content">
+                <p>Nội dung bài đăng...</p>
+            </div>
+            <div class="post-actions">
+                <button>Thích</button>
+                <button>Bình luận</button>
+                <button>Chia sẻ</button>
+            </div>
+        </div>
+
+    </main>
+    <script>
+		document.getElementById('homeLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('homeScreen').style.display = 'block';
+        });
+        document.querySelector('nav ul li a[href="notifications.html"]').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('notificationPanel').classList.remove('hidden');
+        });
+
+        document.getElementById('closeButton').addEventListener('click', function() {
+            document.getElementById('notificationPanel').classList.add('hidden');
+        });
+		document.getElementById('messageLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'tinnhan.html';
+        });
+    </script>
+</body>
+</html>
