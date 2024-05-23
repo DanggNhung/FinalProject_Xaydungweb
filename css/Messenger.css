@@ -1,0 +1,252 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+header {
+    background-color: #405de6;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+	width: 300px;
+}
+
+.search-bar button {
+    background-color: #405de6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #6e7dff;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.messenger-container {
+    display: flex;
+    width: 100%;
+    height:max-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 21%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0px auto;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.friends-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.friends-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.friends-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.friends-list img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.chat-section {
+    width: 50%;
+    border-radius: 10px;
+    margin: 0px auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat-header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.chat-header .chat-options button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.chat-footer {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-footer input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.chat-footer button {
+    padding: 10px 20px;
+    background-color: #405de6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-footer button:hover {
+    background-color: #6e7dff;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    max-width: 60%;
+}
+
+.message.sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+
+.message.received {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    align-self: flex-start;
+}
+
+.message img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.info-section {
+    width: 21%;
+    border-radius: 10px;
+    margin: 0px auto;
+    background-color: white;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-profile img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-options button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10%;
+}

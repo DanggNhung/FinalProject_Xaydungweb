@@ -3,84 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Messenger.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <title>Tin nhắn</title>
-    <style>
-        body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f2f5;
-}
-
-header {
-    background-color: #405de6;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 28px;
-}
-.search-bar {
-    display: flex;
-    align-items: center;
-}
-
-.search-bar input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-	width: 300px;
-}
-
-.search-bar button {
-    background-color: #405de6;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 10px;
-    transition: background-color 0.3s;
-}
-
-.search-bar button:hover {
-    background-color: #6e7dff;
-}
-
-
-nav ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 10px;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-    </style>
+   
 </head>
 <body>
     <header>
-        <h1>Mạng xã hội</h1>
+        <h1>Circle Society</h1>
 		<div class="search-bar">
         <input type="text" placeholder="Tìm kiếm...">
         <button><i class="fas fa-search"></i></button>
@@ -95,7 +25,59 @@ nav ul li a {
             </ul>
         </nav>
     </header>
-    <!-- Thêm nội dung tin nhắn tại đây -->
+    
+    <div class="messenger-container">
+        <div class="sidebar">
+            <h2>Nhắn tin</h2>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search Messenger...">
+            </div>
+            <div class="friends-list">
+                <ul id="friendsList">
+                    <li class="friend" onclick="openChat('Friend')">
+                        <img src="profile1.jpg" alt="Friend">
+                        
+                    </li>
+                    <!-- Thêm các bạn khác tại đây -->
+                </ul>
+            </div>
+        </div>
+        <div class="chat-section">
+            <div class="chat-header">
+                <img src="profile1.jpg" alt="Friend">
+                <span>Friend</span>
+                <div class="chat-options">
+                    <button><i class="fa fa-phone" aria-hidden="true"></i></button>
+                    <button><i class="fa fa-video-camera" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="message received">
+                    
+                </div>
+                <div class="message sent">
+                    
+                </div>
+                <!-- Thêm các tin nhắn khác tại đây -->
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="messageInput" placeholder="Aa">
+                <button>Send</button>
+            </div>
+        </div>
+        <div class="info-section">
+            <div class="user-profile">
+                <img src="profile1.jpg" alt="Friend">
+                
+            </div>
+            <div class="info-options">
+                <button><i class="fa fa-user" aria-hidden="true"></i></button>
+                <button><i class="fa fa-bell" aria-hidden="true"></i></button>
+                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+
     <script>
         document.getElementById('homeLink').addEventListener('click', function(event) {
             event.preventDefault();
