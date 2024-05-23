@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Messenger.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <title>Tin nhắn</title>
+   
+</head>
+<body>
+    <header>
+        <h1>Circle Society</h1>
+		<div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm...">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="homeLink">Trang chủ</a></li>
+                <li><a href="notifications.html" id="notificationlink">Thông báo</a></li>
+				<li><a href="message-box" id="messageLink">Tin nhắn</a><li>
+                <li><a href="profile.html">Hồ sơ</a></li>
+                <li><a href="logout.html">Đăng xuất</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="messenger-container">
+        <div class="sidebar">
+            <h2>Nhắn tin</h2>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search Messenger...">
+            </div>
+            <div class="friends-list">
+                <ul id="friendsList">
+                    <li class="friend" onclick="openChat('Friend')">
+                        <img src="profile1.jpg" alt="Friend">
+                        
+                    </li>
+                    <!-- Thêm các bạn khác tại đây -->
+                </ul>
+            </div>
+        </div>
+        <div class="chat-section">
+            <div class="chat-header">
+                <img src="profile1.jpg" alt="Friend">
+                <span>Friend</span>
+                <div class="chat-options">
+                    <button><i class="fa fa-phone" aria-hidden="true"></i></button>
+                    <button><i class="fa fa-video-camera" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="message received">
+                    
+                </div>
+                <div class="message sent">
+                    
+                </div>
+                <!-- Thêm các tin nhắn khác tại đây -->
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="messageInput" placeholder="Aa">
+                <button>Send</button>
+            </div>
+        </div>
+        <div class="info-section">
+            <div class="user-profile">
+                <img src="profile1.jpg" alt="Friend">
+                
+            </div>
+            <div class="info-options">
+                <button><i class="fa fa-user" aria-hidden="true"></i></button>
+                <button><i class="fa fa-bell" aria-hidden="true"></i></button>
+                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('homeLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('homeScreen').style.display = 'block';
+        });
+        document.getElementById('notificationlink').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'thongbao.html';
+        });
+    </script>
+</body>
+</html>
