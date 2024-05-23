@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tin nhắn</title>
+    <title>Thông báo</title>
     <style>
-        body {
+
+ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -30,6 +31,7 @@ header h1 {
     margin: 0;
     font-size: 28px;
 }
+
 .search-bar {
     display: flex;
     align-items: center;
@@ -75,7 +77,34 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
-
+        .content {
+            padding-top: 100px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .notification-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .notification-header {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .notification {
+            background-color: #e9e9e9;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .notification:last-child {
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -95,15 +124,23 @@ nav ul li a {
             </ul>
         </nav>
     </header>
-    <!-- Thêm nội dung tin nhắn tại đây -->
+
+    <div class="content">
+        <div class="notification-container">
+            <div class="notification-header">Notifications</div>
+            <div class="notification">User1 liked your post.</div>
+            <div class="notification">User2 commented on your photo.</div>
+            <div class="notification">User3 started following you.</div>
+        </div>
+    </div>
     <script>
-        document.getElementById('homeLink').addEventListener('click', function(event) {
+		document.getElementById('homeLink').addEventListener('click', function(event) {
             event.preventDefault();
-            document.getElementById('homeScreen').style.display = 'block';
+            window.location.href = 'trangchu.html';
         });
-        document.getElementById('notificationlink').addEventListener('click', function(event) {
+		document.getElementById('messageLink').addEventListener('click', function(event) {
             event.preventDefault();
-            window.location.href = 'thongbao.html';
+            window.location.href = 'tinnhan.html';
         });
     </script>
 </body>

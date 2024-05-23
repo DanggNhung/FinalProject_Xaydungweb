@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-4c7PtoQyxp9ihvo9ap+J8m4euLtApQVksKJtM4f8vJFUOFqn9FdwAf2zABm1Xo5M" crossorigin="anonymous">
 	<style>
-	body {
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -20,6 +20,10 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 header h1 {
@@ -55,8 +59,10 @@ header h1 {
 
 
 nav ul {
+    display: flex;
     list-style-type: none;
     padding: 0;
+    margin: 10px;
 }
 
 nav ul li {
@@ -143,35 +149,6 @@ main {
 .hidden {
     display: none;
 }
-
-.notification-panel {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 80px; /* Adjust based on your header height */
-    right: 20px; /* Adjust based on your preference */
-}
-
-.notification {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fafafa;
-}
-
-.notification:last-child {
-    margin-bottom: 0;
-}
-
 .avatar {
     width: 50px;
     height: 50px;
@@ -218,7 +195,7 @@ main {
         <nav>
             <ul>
                 <li><a href="index.html" id="homeLink">Trang chủ</a></li>
-                <li><a href="notifications.html">Thông báo</a></li>
+                <li><a href="notifications.html" id="notificationlink">Thông báo</a></li>
 				<li><a href="message-box" id="messageLink">Tin nhắn</a><li>
                 <li><a href="profile.html">Hồ sơ</a></li>
                 <li><a href="logout.html">Đăng xuất</a></li>
@@ -265,13 +242,9 @@ main {
             event.preventDefault();
             document.getElementById('homeScreen').style.display = 'block';
         });
-        document.querySelector('nav ul li a[href="notifications.html"]').addEventListener('click', function(event) {
+        document.getElementById('notificationlink').addEventListener('click', function(event) {
             event.preventDefault();
-            document.getElementById('notificationPanel').classList.remove('hidden');
-        });
-
-        document.getElementById('closeButton').addEventListener('click', function() {
-            document.getElementById('notificationPanel').classList.add('hidden');
+            window.location.href = 'thongbao.html';
         });
 		document.getElementById('messageLink').addEventListener('click', function(event) {
             event.preventDefault();
