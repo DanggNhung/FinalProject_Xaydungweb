@@ -1,0 +1,121 @@
+body {
+    background-color: #b9b9b9;
+    font-family: Arial;
+}
+
+.head {
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    background-color: #fff;
+    height: 400px;
+}
+
+.tophead {
+    margin-top: 120px;
+    margin-bottom: 10px;
+    margin-left: 170px;
+    width: 800px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.follow {
+    display: flex;
+}
+
+.tph1 {
+    align-items: center;
+    font-size: 27px;
+    font-weight: bold;
+    color: #000000;
+    transform: translate(20px);
+    margin-top: 50px;
+    margin-bottom: 75px;
+}
+
+.tph2 {
+    font-size: 27px;
+    font-weight: bold;
+    color: #000;
+    transform: translate(20px);
+    margin-top: 50px;
+    margin-bottom: 75px;
+    margin-left: 70px;
+}
+
+.tph3 {
+    font-size: 27px;
+    font-weight: bold;
+    color: #000;
+    transform: translate(20px);
+    margin-top: 50px;
+    margin-bottom: 75px;
+    margin-left: 70px;
+}
+
+.Picture {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.avatar {
+    margin-top: 35px;
+    margin-left: 150px;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    height: 330px;
+    border: 5px solid #ddd;
+    border-radius: 50%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.avtpic {
+    box-sizing: border-box;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    background-color: #7e7e7e;
+    border-radius: 50%;
+    transform: translate(390px, -90px);
+}
+
+.avtpic i {
+    margin-top: 12px;
+    margin-left: 13px;
+    font-size: 44px;
+    color: #ffffff;
+}
+
+img {
+    margin-top: 5px;
+    margin-left: 5px;
+    display: block;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.body-left {
+    margin-left: 100px;
+    margin-top: 20px;
+    background-color: aqua;
+    width: 400px;
+    height: 1000px;
+}
+
+.intro {
+    background-color: #000;
+    width: 400px;
+    height: 25rem;
+    border-radius: 15%;
+    color: #fff;
+}
+
+h1 {
+    margin-left: 10px;
+}

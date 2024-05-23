@@ -1,0 +1,83 @@
+body{
+    background: url('../images/anh1.png');
+    background-size: cover;
+    background-position-y: -60px;/*de chinh anh cho can bang*/
+
+
+}       
+#wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content:right;
+    margin-right: 150px;
+    align-items: center;
+}
+
+#form_login{
+    max-width: 400px;
+    background: rgba(255, 248, 248, 0.8);
+    flex-grow: 1;
+    padding: 30px 30px 40px;
+    box-shadow: 0px 0px 17px 2px rgba(63, 78, 101, 0.8);
+    border-radius: 8px
+
+}
+.form-head{
+    font-size: 25px;
+    color: #3653d5;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.form-group{
+    border-bottom: 1px solid #1e1c1c;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: flex;
+}
+.form-group i{
+    font-size: 14px;
+    padding: 5px;
+}
+.form-input{
+    background:  transparent;
+    border: 0;
+    outline: 0;
+    color: #454545;
+    flex-grow: 1;
+}
+.sign-up{
+    color: #1c1a1a;
+    text-align: right;
+
+}
+sign-up:hover{
+    text-decoration: underline;
+}
+.form-input::placeholder{
+    color: #3d3d3d;
+}
+
+#eye i{
+    padding-right: 0;
+    cursor: pointer;
+}
+
+.form-submit{
+    font-family: Arial, sans-serif;
+    background: #436ade;
+    border: transparent;
+    color: #ffffff;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    transition: 0.25s ease-in-out;
+    margin-top: 30px;
+
+
+}
+
+.form-submit:hover{
+    border: 1px solid #858e99;
+}
