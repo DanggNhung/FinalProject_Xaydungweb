@@ -12,9 +12,9 @@
     <header>
         <h1>Circle Society</h1>
 		<div class="search-bar">
-        <input type="text" placeholder="Tìm kiếm...">
-        <button><i class="fas fa-search"></i></button>
-    </div>
+            <input type="text" placeholder="Tìm kiếm...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html" id="homeLink">Trang chủ</a></li>
@@ -25,12 +25,12 @@
             </ul>
         </nav>
     </header>
-    
+
     <div class="messenger-container">
         <div class="sidebar">
             <h2>Nhắn tin</h2>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Search Messenger...">
+            <div class="searchBar-Chats">
+                <input type="text" id="searchInput" placeholder="Tìm tin nhắn...">
             </div>
             <div class="friends-list">
                 <ul id="friendsList">
@@ -48,21 +48,22 @@
                 <span>Friend</span>
                 <div class="chat-options">
                     <button><i class="fa fa-phone" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-video-camera" aria-hidden="true"></i></button>
+                    <button><i class="fa fa-video-camera"></i></button>
                 </div>
             </div>
             <div class="chat-body" id="chatBody">
                 <div class="message received">
-                    
+                    <p>We want to use the sprite image ("img_navsprites.gif") to create a navigation list.</p>
                 </div>
                 <div class="message sent">
-                    
+                    <p>We will use an HTML list, because it can be a link and also supports a background image:</p>
                 </div>
-                <!-- Thêm các tin nhắn khác tại đây -->
             </div>
             <div class="chat-footer">
-                <input type="text" id="messageInput" placeholder="Aa">
-                <button>Send</button>
+                <form action="/button" method="SEND">
+                    <input type="text" id="messageInput" placeholder="Aa" required> <br><br>
+                    <button><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                </form>
             </div>
         </div>
         <div class="info-section">
