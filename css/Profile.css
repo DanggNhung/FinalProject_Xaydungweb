@@ -14,7 +14,7 @@ body {
 .tophead {
     margin-top: 120px;
     margin-bottom: 10px;
-    margin-left: 170px;
+    padding-left: 30px;
     width: 800px;
     height: 150px;
     display: flex;
@@ -62,11 +62,11 @@ body {
 
 .avatar {
     margin-top: 35px;
-    margin-left: 150px;
+    margin-left: 60px;
     justify-content: center;
     align-items: center;
-    width: 330px;
-    height: 330px;
+    width: 300px;
+    height: 300px;
     border: 5px solid #ddd;
     border-radius: 50%;
     padding: 5px;
@@ -80,7 +80,7 @@ body {
     position: absolute;
     background-color: #7e7e7e;
     border-radius: 50%;
-    transform: translate(390px, -90px);
+    transform: translate(300px, -90px);
 }
 
 .avtpic i {
@@ -90,32 +90,127 @@ body {
     color: #ffffff;
 }
 
-img {
+.avatar img {
     margin-top: 5px;
     margin-left: 5px;
     display: block;
-    width: 300px;
-    height: 300px;
+    width: 270px;
+    height: 270px;
     object-fit: cover;
     border-radius: 50%;
 }
-
+.name{
+    margin-left: 20px;
+    text-align: left;
+    margin-top: 100px;
+    background-color: #fff;
+    width: 350px;
+    color: #000;
+    height: 300px;
+}
+.real-name{
+    font-weight: bold;
+    font-size: 17px;
+}
+.body{
+    display: flex;
+}
 .body-left {
     margin-left: 100px;
     margin-top: 20px;
-    background-color: aqua;
     width: 400px;
     height: 1000px;
 }
 
 .intro {
-    background-color: #000;
+    background-color: #fff;
     width: 400px;
     height: 25rem;
-    border-radius: 15%;
-    color: #fff;
+    border-radius: 20px;
+}
+.intro1{
+    margin-left: 20px;
+    padding-top: 5px;
+}
+.bio{
+    font-weight: bold;
+    background-color: #ddd;
+    height: 3rem;
+    width: 22rem;
+    text-align: center;
+    padding-top: 0.1px;
+    margin-left: 1.5rem;
+    border-radius: 10px;
+}
+.details{
+    margin-top: 100px;
+    font-weight: bold;
+    background-color: #ddd;
+    height: 3rem;
+    width: 22rem;
+    text-align: center;
+    padding-top: 0.1px;
+    margin-left: 1.5rem;
+    border-radius: 10px;
+}
+.highlight{
+    margin-top: 50px;
+    font-weight: bold;
+    background-color: #ddd;
+    height: 3rem;
+    width: 22rem;
+    text-align: center;
+    padding-top: 0.1px;
+    margin-left: 1.5rem;
+    border-radius: 10px;
+}
+.img{
+    margin-top: 20px;
+    background-color: #fff;
+    width: 400px;
+    height: 14rem;
+    border-radius: 20px;
+}
+.imghead{
+    display: flex;
+    margin-left: 20px;
+    padding-top: 5px;
+}
+.imgh2{
+    margin-left: 200px;
+}
+.img-up{
+    margin-left: 20px;
 }
 
-h1 {
-    margin-left: 10px;
+.img-up img{
+    border-radius: 20px;
+    height: 8rem;
+    width: 8rem;
+}
+.stt-up{
+    margin-left: 50px;
+    margin-top: 20px;
+    background-color: #fff;
+    width: 800px;
+    height: 10rem;
+    border-radius: 20px;
+}
+.post-up{
+    margin-left: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-right: 20px;
+}
+.post-up input{
+    margin-left: 100px;
+    width: 600px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #ddd;
+    color: #fff;
+    border: #fff;
+    padding-left: 10px;
+    font-size: 17px;
 }
