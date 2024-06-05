@@ -17,11 +17,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" id="homeLink">Trang chủ</a></li>
+                <li><a href="Trangchu.html" id="homeLink">Trang chủ</a></li>
                 <li><a href="notifications.html" id="notificationlink">Thông báo</a></li>
 				<li><a href="message-box" id="messageLink">Tin nhắn</a><li>
-                <li><a href="profile.html">Hồ sơ</a></li>
-                <li><a href="logout.html">Đăng xuất</a></li>
+                <li><a href="profile.html" id="profileLink">Hồ sơ</a></li>
+                <li><a href="index.html" id="logoutLink">Đăng xuất</a></li>
             </ul>
         </nav>
     </header>
@@ -36,9 +36,12 @@
                 <ul id="friendsList">
                     <li class="friend" onclick="openChat('Friend')">
                         <img src="profile1.jpg" alt="Friend">
-                        
+                        <span>Vũ Thị Trang</span>
                     </li>
-                    <!-- Thêm các bạn khác tại đây -->
+                    <li class="friend" onclick="openChat('Friend')">
+                        <img src="profile2.jpg" alt="Friend">
+                        <span>Tracy Vu</span>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -80,14 +83,27 @@
     </div>
 
     <script>
-        document.getElementById('homeLink').addEventListener('click', function(event) {
+		document.getElementById('homeLink').addEventListener('click', function(event) {
             event.preventDefault();
-            document.getElementById('homeScreen').style.display = 'block';
+            window.location.href = 'trangchu.html';
         });
-        document.getElementById('notificationlink').addEventListener('click', function(event) {
+		document.getElementById('notificationlink').addEventListener('click', function(event) {
             event.preventDefault();
             window.location.href = 'thongbao.html';
         });
+        document.getElementById('messageLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'Messenger.html';
+        });
+        document.getElementById('profileLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'Profile.html';
+        });
+        document.getElementById('logoutlink').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'index.html';
+        });
+
     </script>
 </body>
 </html>

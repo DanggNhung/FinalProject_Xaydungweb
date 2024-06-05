@@ -187,18 +187,18 @@ main {
 </head>
 <body>
     <header>
-        <h1>Mạng xã hội</h1>
+        <h1>Circle Society</h1>
 		<div class="search-bar">
         <input type="text" placeholder="Tìm kiếm...">
         <button><i class="fas fa-search"></i></button>
     </div>
         <nav>
             <ul>
-                <li><a href="index.html" id="homeLink">Trang chủ</a></li>
+                <li><a href="Trangchu.html" id="homeLink">Trang chủ</a></li>
                 <li><a href="notifications.html" id="notificationlink">Thông báo</a></li>
 				<li><a href="message-box" id="messageLink">Tin nhắn</a><li>
-                <li><a href="profile.html">Hồ sơ</a></li>
-                <li><a href="logout.html">Đăng xuất</a></li>
+                <li><a href="profile.html" id="profileLink">Hồ sơ</a></li>
+                <li><a href="index.html" id="logoutLink">Đăng xuất</a></li>
             </ul>
         </nav>
     </header>
@@ -240,15 +240,23 @@ main {
     <script>
 		document.getElementById('homeLink').addEventListener('click', function(event) {
             event.preventDefault();
-            document.getElementById('homeScreen').style.display = 'block';
+            window.location.href = 'trangchu.html';
         });
-        document.getElementById('notificationlink').addEventListener('click', function(event) {
+		document.getElementById('notificationlink').addEventListener('click', function(event) {
             event.preventDefault();
             window.location.href = 'thongbao.html';
         });
-		document.getElementById('messageLink').addEventListener('click', function(event) {
+        document.getElementById('messageLink').addEventListener('click', function(event) {
             event.preventDefault();
             window.location.href = 'Messenger.html';
+        });
+        document.getElementById('profileLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'Profile.html';
+        });
+        document.getElementById('logoutlink').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'index.html';
         });
     </script>
 </body>
