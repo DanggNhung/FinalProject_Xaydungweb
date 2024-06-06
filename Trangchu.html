@@ -30,9 +30,11 @@ header h1 {
     margin: 0;
     font-size: 28px;
 }
+
 .search-bar {
     display: flex;
     align-items: center;
+    width: 30%;
 }
 
 .search-bar input {
@@ -106,6 +108,7 @@ main {
 
 .post-actions button {
     margin-right: 10px;
+    margin-top: 10px;
     padding: 8px 20px;
     border: none;
     border-radius: 20px;
@@ -118,37 +121,7 @@ main {
 .post-actions button:hover {
     background-color: #6e7dff;
 }
-.add-icon-btn {
-    background-color: #6e7dff;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    padding: 8px 20px;
-    transition: background-color 0.3s;
-}
 
-.add-icon-btn:hover {
-    background-color: #405de6;
-}
-
-.upload-media-btn {
-    background-color: #6e7dff;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    padding: 8px 20px;
-    transition: background-color 0.3s;
-}
-
-.upload-media-btn:hover {
-    background-color: #6e7dff;
-}
-
-.hidden {
-    display: none;
-}
 .avatar {
     width: 50px;
     height: 50px;
@@ -156,31 +129,12 @@ main {
     margin-right: 10px;
 }
 
-.message {
-    flex: 1;
-}
-
-.message strong {
-    color: #555;
-}
-
-.time {
-    display: block;
-    color: #999;
-    font-size: 0.8em;
-    margin-top: 5px;
-}
-
-#closeButton {
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    margin-top: 20px;
-    background-color: #f44336;
-    color: #fff;
+.transparent-input {
+    background-color: transparent;
     border: none;
-    border-radius: 5px;
-}
+    outline: none;
+    color: black;
+  }
 </style>
 
     <title>Tên web</title>
@@ -189,9 +143,9 @@ main {
     <header>
         <h1>Circle Society</h1>
 		<div class="search-bar">
-        <input type="text" placeholder="Tìm kiếm...">
-        <button><i class="fas fa-search"></i></button>
-    </div>
+            <input type="text" placeholder="Tìm kiếm...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
         <nav>
             <ul>
                 <li><a href="Trangchu.html" id="homeLink">Trang chủ</a></li>
@@ -203,22 +157,20 @@ main {
         </nav>
     </header>
 	
-	<div id="notificationPanel" class="notification-panel hidden">
-        <h1>Thông báo</h1>
-        <button id="closeButton">Đóng</button>
-    </div>
-
     <main>
 		<div class="post">
-			<div class="post-header">
-				<h2>Bạn đang nghĩ gì? </h2>
-			</div>
-			<div class="post-content">
-				<p>Hãy chia sẻ cảm xúc của bạn ...</p>
-				 <button class="add-icon-btn"><i class="fas fa-plus-circle"></i> Thêm icon</button>
-				 <button class="upload-media-btn"><i class="fas fa-upload"></i> Đăng ảnh/video</button>
-			</div>
-		</div>
+            <div class="post-header">
+              <h2>Bạn đang nghĩ gì? </h2>
+            </div>
+            <div class="post-content">
+                <input type="text" class="transparent-input" placeholder="Hãy chia sẻ cảm nghĩ ">
+            </div>
+            <div class="post-actions">
+                <button onclick="dangBai()">Đăng bài</button>
+                <button onclick="themIcon()">Thêm icon</button>
+                <button onclick="dangAnhVideo()">Đăng ảnh/Video</button>
+            </div>
+          </div>
 			
 			
         <div class="post">
@@ -230,7 +182,7 @@ main {
                 <p>Nội dung bài đăng...</p>
             </div>
             <div class="post-actions">
-                <button>Thích</button>
+                <button onclick="thichPost()">Thích</button>
                 <button>Bình luận</button>
                 <button>Chia sẻ</button>
             </div>
@@ -259,5 +211,5 @@ main {
             window.location.href = 'index.html';
         });
     </script>
-</body>
+    <script src="javascript/Trangchu.js"></script>
 </html>
