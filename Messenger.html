@@ -63,9 +63,9 @@
                 </div>
             </div>
             <div class="chat-footer">
-                <form action="/button" method="SEND">
+                <form id="chatForm">
                     <input type="text" id="messageInput" placeholder="Aa" required> <br><br>
-                    <button><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                    <button type="submit" id="sendButton"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                 </form>
             </div>
         </div>
@@ -82,7 +82,7 @@
         </div>
     </div>
 
-    <script>
+    <script src="javascript/Messenger.js">
 		document.getElementById('homeLink').addEventListener('click', function(event) {
             event.preventDefault();
             window.location.href = 'trangchu.html';
