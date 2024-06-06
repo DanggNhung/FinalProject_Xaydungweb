@@ -258,19 +258,26 @@ nav ul li a {
     margin-top: 20px;
     background-color: #fff;
     width: 800px;
-    height: 10rem;
+    height: 8rem;
     border-radius: 20px;
 }
-.post-up{
+.post-up img{
     margin-left: 20px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.post-up{
+    display: flex;
     padding-top: 20px;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 20px;
-    margin-right: 20px;
+    padding-bottom: 10px;
 }
 .post-up input{
-    margin-left: 100px;
-    width: 600px;
+    margin-left: 25px;
+    width: 670px;
     height: 40px;
     border-radius: 20px;
     background-color: #ddd;
@@ -278,4 +285,62 @@ nav ul li a {
     border: #fff;
     padding-left: 10px;
     font-size: 17px;
+}
+.stt{
+    margin-left: 50px;
+    margin-top: 20px;
+    background-color: #fff;
+    width: 800px;
+    height: 1400px;
+    border-radius: 20px;
+
+}
+
+.post img{
+    object-fit: cover;
+    height: 800px;
+    width: 800px;
+}
+.user-up{
+    display: flex;
+}
+.user-avt img{
+    padding-top: 20px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+    margin-right: 10px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+#name{
+    margin-top: 25px;
+    font-size: 15px;
+}
+#time{
+    font-size: 10px;
+}
+#comment{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+.like{
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    font-size: 48px; 
+    color: transparent; 
+    border: 2px solid #007bff;
+    border-radius: 50%; 
+    padding: 10px;
+    cursor: pointer; 
+    transition: color 0.3s ease, background-color 0.3s ease; 
+}
+.like.clicked{
+    color: #007bff; 
+    background-color: #e0f0ff;
 }

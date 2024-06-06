@@ -98,7 +98,45 @@
         <div class="right-body">
             <div class="stt-up">
                 <div class="post-up">
+                    <img src="images/anhtest.jpg" alt="">
                     <input type="text" class="form-input" placeholder="Bạn đang nghĩ gì?">
+                </div>
+            </div>
+            <div class="stt">
+                <div class="post">
+                    <div class="user-up">
+                        <div class="user-avt">
+                            <img src="images/anhtest.jpg" alt="">
+                        </div>
+                        <div class="user-name">
+                            <div id="name">
+                                <p><b>Kyu._n</b></p>
+                            </div>
+                            <div id="time">
+                                <p>05 Tháng 6 19:30</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-post">
+                        <img src="images/prf.jpg">
+                        <div id="comment">
+                            <p>Tiramisu mọi người oiiiii, nhà tớ có hai vị:</p>
+                            <p> - Nguyên bản</p>
+                            <p>   - Trái cây nhiệt đới</p>
+                            <p>    Nói tới vị nguyên bản thì có lẽ mọi người cũng có thể tưởng tượng ra lớp bánh lady fingers mềm, ẩm thơm mùi cafe pha với hương rượu Rhum xen kẽ với lớp kem phô mai Mascarpone béo ngậy, man mát được quyện cùng vị cacao đắng nhẹ được rải ở mặt trên cùng của chiếc bánh.</p>
+                            <p>    Phiên bản trái cây nhiệt đới được phá cách với lớp bánh dậy mùi hương trái cây cùng từng tầng hương chanh leo và dứa chua nhẹ và vị ngọt thanh tự nhiên từ hoa quả tươi và lớp mứt phúc bồn tử làm cân bằng hơn về vị beo béo, ngầy ngậy của lớp kem phô mai.</p>
+                            <p>    Nhà tớ hiện có size bánh 13x9.5x6(cm) với giá 60k cho vị nguyên bản và 65k cho vị hoa quả nhiệt đới.</p>
+                            <p>    Có cả size nhỏ 4.2x4.2x4.5 với giá 30k cho vị nguyên bản và 35k cho vị hoa quả ạa</p>
+                            <p>    Tớ nhận đơn trong hôm nay và mai sẽ trả đơn ạ. Freeship bán kính 2km và trong trường P.</p>
+                            <p>    Tớ ở Nghĩa Lộ, Yên Nghĩa</p>
+                            <p>    Sđt:0852009456</p>
+                        </div>
+                        <div class="interact">
+                            <div class="like">
+                                <button><i class="fas fa-thumbs-up"><a href="#">Thích</a></i></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -124,6 +162,22 @@
             event.preventDefault();
             window.location.href = 'index.html';
         });
+        if ( i % 2 == 0 ) {
+            $("p").css({"background": "url('images/like.png') no-repeat","text-indent": "20px",})
+            $("p").html("Bạn đã thích ảnh này");
+            $("a").html("Unlike")
+        } else {
+            $("p").css({"background": "url('images/unlike.png') 0% 100% no-repeat","text-indent": "20px",})
+            $("p").html("Bạn không thích ảnh này");
+            $("a").html("Like")}
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const icon = document.querySelector('.icon');
+
+        icon.addEventListener('click', function() {
+        this.classList.toggle('clicked');
+    });
+});
     </script>
 </body>
 
