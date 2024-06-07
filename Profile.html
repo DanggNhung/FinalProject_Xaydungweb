@@ -132,9 +132,9 @@
                             <p>    Sđt:0852009456</p>
                         </div>
                         <div class="interact">
-                            <div class="like">
-                                <button><i class="fas fa-thumbs-up"><a href="#">Thích</a></i></button>
-                            </div>
+                            <button onclick="thichPost()">Thích</button>
+                            <button>Bình luận</button>
+                            <button>Chia sẻ</button>
                         </div>
                     </div>
                 </div>
@@ -162,22 +162,9 @@
             event.preventDefault();
             window.location.href = 'index.html';
         });
-        if ( i % 2 == 0 ) {
-            $("p").css({"background": "url('images/like.png') no-repeat","text-indent": "20px",})
-            $("p").html("Bạn đã thích ảnh này");
-            $("a").html("Unlike")
-        } else {
-            $("p").css({"background": "url('images/unlike.png') 0% 100% no-repeat","text-indent": "20px",})
-            $("p").html("Bạn không thích ảnh này");
-            $("a").html("Like")}
-
-        document.addEventListener('DOMContentLoaded', function() {
-        const icon = document.querySelector('.icon');
-
-        icon.addEventListener('click', function() {
-        this.classList.toggle('clicked');
-    });
-});
+        function thichPost() {
+        alert("Bạn đã thích nội dung này");
+        }
     </script>
 </body>
 
