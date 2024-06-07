@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatBody = document.getElementById('chatBody');
     const messageInput = document.getElementById('messageInput');
     const sendButton = document.getElementById('sendButton');
+    const friendsList = document.getElementById('friendsList');
 
     // Hàm load lại tin nhắn đã có khi tải lại trang
     function loadMessages() {
@@ -48,4 +49,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     loadMessages(); 
+
+    // Hàm load danh sách bạn bè mỗi khi có thêm người đăng kí
+    function loadFriendsList() {
+        friendsList.innerHTML = ''; // Xóa danh sách cũ
+        for (var i = 0; i < localStorage.length; i++) {
+            var key = localStorage.key(i);
+            var user = JSON.parse(localStorage.getItem(key));
+            if (user && user.fullname) {
+                var friendElement = document.createElement('li');
+                friendElement.classList.add('friend');
+                friendElement.onclick = () => openChat(user.username);
+                friendElement.innerHTML = `
+                    <img src="images/user.jpg" alt="${user.fullname}">
+                    <span>${user.fullname}</span>
+                `;
+                friendsList.appendChild(friendElement);
+            }
+        }
+    }
+
+    loadFriendsList();
 });
