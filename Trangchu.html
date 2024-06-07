@@ -81,13 +81,37 @@ nav ul li a {
 main {
     padding: 20px;
 }
-
-.post {
+.main{
+    display: flex;
+}
+.tool{
+    border-radius: 10px;
+    background-color: #fff;
+    width: 300px;
+    height: 400px;
+}
+.tool ul{
+    list-style: none;
+    line-height: 40px;
+}
+.post{
+    margin-left: 30px;
+    width: 1200px;
+}
+.post1 {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
+}
+.post2{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .post-header {
@@ -158,34 +182,45 @@ main {
     </header>
 	
     <main>
-		<div class="post">
-            <div class="post-header">
-              <h2>Bạn đang nghĩ gì? </h2>
+        <div class="main">
+            <div class="tool">
+                <ul>
+                    <li>Đã lưu</li>
+                    <li>Kỉ niệm</li>
+                    <li>Bảng feed</li>
+                    <li>Sự kiện</li>
+                    <li>Market</li>
+                </ul>
             </div>
-            <div class="post-content">
-                <input type="text" class="transparent-input" placeholder="Hãy chia sẻ cảm nghĩ ">
-            </div>
-            <div class="post-actions">
-                <button onclick="dangBai()">Đăng bài</button>
-                <button onclick="themIcon()">Thêm icon</button>
-                <button onclick="dangAnhVideo()">Đăng ảnh/Video</button>
-            </div>
-          </div>
-			
-			
-        <div class="post">
-            <div class="post-header">
-                <img src="C:\Users\SV\Downloads\pam.jpg">
-                <h2>Tên người dùng</h2>
-            </div>
-            <div class="post-content">
-                <p>Nội dung bài đăng...</p>
-            </div>
-            <div class="post-actions">
-                <button onclick="thichPost()">Thích</button>
-                <button>Bình luận</button>
-                <button>Chia sẻ</button>
-            </div>
+            <div class="post">
+                <div class="post1">
+                    <div class="post-header">
+                      <h2>Bạn đang nghĩ gì? </h2>
+                    </div>
+                    <div class="post-content">
+                        <input type="text" class="transparent-input" placeholder="Hãy chia sẻ cảm nghĩ ">
+                        <div class="post-actions">
+                            <button onclick="dangBai()">Đăng bài</button>
+                            <button onclick="themIcon()">Thêm icon</button>
+                            <button onclick="dangAnhVideo()">Đăng ảnh/Video</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="post2">
+                    <div class="post-header">
+                        <img src="C:\Users\SV\Downloads\pam.jpg">
+                        <h2>Tên người dùng</h2>
+                    </div>
+                    <div class="post-content">
+                        <p>Nội dung bài đăng...</p>
+                    </div>
+                    <div class="post-actions">
+                        <button onclick="thichPost()">Thích</button>
+                        <button>Bình luận</button>
+                        <button>Chia sẻ</button>
+                    </div>
+                </div>
+            </div>            
         </div>
 
     </main>
