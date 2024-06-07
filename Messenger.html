@@ -18,7 +18,7 @@
         <nav>
             <ul>
                 <li><a href="Trangchu.html" id="homeLink">Trang chủ</a></li>
-                <li><a href="notifications.html" id="notificationlink">Thông báo</a></li>
+                <li><a href="#" id="notificationBtn">Thông báo</a></li>
 				<li><a href="message-box" id="messageLink">Tin nhắn</a><li>
                 <li><a href="profile.html" id="profileLink">Hồ sơ</a></li>
                 <li><a href="index.html" id="logoutLink">Đăng xuất</a></li>
@@ -84,14 +84,18 @@
         </div>
     </div>
 
-    <script src="javascript/Messenger.js">
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="modalMessage">Thông báo mới!</p>
+            </div>
+        </div>
+</main>
+
+    <script>
 		document.getElementById('homeLink').addEventListener('click', function(event) {
             event.preventDefault();
             window.location.href = 'Trangchu.html';
-        });
-		document.getElementById('notificationlink').addEventListener('click', function(event) {
-            event.preventDefault();
-            window.location.href = 'thongbao.html';
         });
         document.getElementById('messageLink').addEventListener('click', function(event) {
             event.preventDefault();
@@ -105,7 +109,8 @@
             event.preventDefault();
             window.location.href = 'index.html';
         });
-
     </script>
+    <script src="javascript/Messenger.js"></script>
+    <script src="javascript/thongbao.js"></script>
 </body>
 </html>
