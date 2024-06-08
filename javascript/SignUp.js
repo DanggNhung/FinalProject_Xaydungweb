@@ -48,6 +48,7 @@ function login(e) {
     var data = JSON.parse(user);
     if(username == data.username && password == data.password) {
         alert("Đăng nhập thành công!")
+        localStorage.setItem("loggedInUser", data.fullname);
         window.location.href="Trangchu.html"
     }
     else{

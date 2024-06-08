@@ -110,6 +110,13 @@ main {
     cursor: pointer;
     transition: background-color 0.3s;
     border-radius: 5px;
+    font-weight: bold;
+    margin-left: 5%;
+}
+.tool ul li img {
+    border-radius: 50%;
+    width: 50px;
+    margin-right: 10px;
 }
 .tool ul li:hover {
     background-color: #f0f0f0;
@@ -278,12 +285,12 @@ main {
 
 
 </style>
-    <title>Tên web</title>
+    <title>Circle Society</title>
 </head>
 <body>
     <header>
         <h1>Circle Society</h1>
-		<div class="search-bar">
+        <div class="search-bar">
             <input type="text" placeholder="Tìm kiếm...">
             <button><i class="fas fa-search"></i></button>
         </div>
@@ -291,17 +298,18 @@ main {
             <ul>
                 <li><a href="Trangchu.html" id="homeLink">Trang chủ</a></li>
                 <li><a href="#" id="notificationBtn">Thông báo</a></li>
-				<li><a href="message-box" id="messageLink">Tin nhắn</a><li>
+                <li><a href="message-box" id="messageLink">Tin nhắn</a><li>
                 <li><a href="profile.html" id="profileLink">Hồ sơ</a></li>
                 <li><a href="index.html" id="logoutLink">Đăng xuất</a></li>
             </ul>
         </nav>
     </header>
-	
+
     <main>
         <div class="main">
             <div class="tool">
                 <ul>
+                    <li id="userName"></li>
                     <li><i class="material-icons">group</i><a href="#">Bạn bè</a></li>
                     <li><i class="material-icons">history</i><a href="#">Kỉ niệm</a></li>
                     <li><i class="material-icons">bookmark</i><a href="#">Đã lưu</a></li>
@@ -329,11 +337,10 @@ main {
                     </div>
                 </div>
 
-            <div id="iconPicker" class="icon-picker">
-                <h3>Chọn icon</h3>
-                <div id="iconList" class="icon-list"></div>
-            </div>
-
+                <div id="iconPicker" class="icon-picker">
+                    <h3>Chọn icon</h3>
+                    <div id="iconList" class="icon-list"></div>
+                </div>
 
                 <div class="post2">
                     <div class="post-header">
@@ -349,7 +356,7 @@ main {
                         <button onclick="hienChiaSe()"><i class="material-icons">share</i></button>
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
 
         <div id="myModal" class="modal">
@@ -378,10 +385,10 @@ main {
                 <button onclick="chiaSeTwitter()">Twitter</button>
             </div>
         </div>
-
     </main>
+
     <script>
-		document.getElementById('homeLink').addEventListener('click', function(event) {
+        document.getElementById('homeLink').addEventListener('click', function(event) {
             event.preventDefault();
             window.location.href = 'Trangchu.html';
         });
@@ -393,9 +400,27 @@ main {
             event.preventDefault();
             window.location.href = 'Profile.html';
         });
-        document.getElementById('logoutlink').addEventListener('click', function(event) {
+        document.getElementById('logoutLink').addEventListener('click', function(event) {
             event.preventDefault();
             window.location.href = 'index.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            function showUsername() {
+                const userName = document.getElementById('userName');
+                userName.innerHTML = '';
+                var key = localStorage.getItem('loggedInUser');
+                if (key) {
+                    var account = document.createElement('li');
+                    account.classList.add('name');
+                    account.innerHTML = `
+                        <img src="images/user.jpg" alt="${key}">
+                        <span>${key}</span>
+                    `;
+                    userName.appendChild(account);
+                }
+            }
+            showUsername();
         });
     </script>
     <script src="javascript/Trangchu.js"></script>
