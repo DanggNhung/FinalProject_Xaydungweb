@@ -1,6 +1,8 @@
 body {
     background-color: #b9b9b9;
-    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -12,9 +14,6 @@ header {
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
 }
 
 header h1 {
@@ -70,10 +69,10 @@ nav ul li a {
 
 .head {
     display: flex;
-    max-width: 100%;
-    margin: auto;
+    margin: 0px;
     background-color: #fff;
     height: 400px;
+    width: auto;
 }
 
 .tophead {
@@ -345,8 +344,8 @@ nav ul li a {
     font-size: 14px;
 }
 .interact button {
-    margin-left: 130px;
-    margin-top: 20px;
+    margin-left: 135px;
+    margin-top: 10px;
     padding: 8px 20px;
     border: none;
     border-radius: 20px;

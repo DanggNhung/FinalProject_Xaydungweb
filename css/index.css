@@ -1,5 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -10,9 +12,6 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
 }
 
 header h1 {
