@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (user && user.fullname) {
                 var friendElement = document.createElement('li');
                 friendElement.classList.add('friend');
-                friendElement.onclick = () => openChat(user.username);
                 friendElement.innerHTML = `
                     <img src="images/user.jpg" alt="${user.fullname}">
                     <span>${user.fullname}</span>
