@@ -124,7 +124,15 @@ nav ul li a {
     position: relative;
     box-sizing: border-box;
 }
-
+.avtpic button {
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 13px;
+    transform: translate(-15px, -10px);
+    height: 70px;
+    width: 75px;
+    border: none;
+}
 .avatar {
     margin-top: 35px;
     margin-left: 60px;
@@ -145,16 +153,24 @@ nav ul li a {
     position: absolute;
     background-color: #7e7e7e;
     border-radius: 50%;
-    transform: translate(300px, -90px);
+    transform: translate(230px, 190px);
 }
 
 .avtpic i {
-    margin-top: 12px;
-    margin-left: 13px;
+    margin-top: 4px;
+    margin-left: 5px;
     font-size: 44px;
     color: #ffffff;
 }
-
+.avtpic img{
+    margin-top: 5px;
+    margin-left: 5px;
+    display: block;
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 .avatar img {
     margin-top: 5px;
     margin-left: 5px;

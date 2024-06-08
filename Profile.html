@@ -33,10 +33,11 @@
     <div class="head">
         <div class="Picture">
             <div class="avatar">
-                <img src="images/anhtest.jpg" alt="">
-            </div>
-            <div class="avtpic">
-                <i class="fas fa-camera"></i>
+                <div class="avtpic">
+                    <button onclick="upAnh()"><i class="fas fa-camera"></i></button>        
+                    <input type="file" id="fileInput" accept="image/*" >
+                    <img id="avt" src="" alt="Avatar">
+                </div>
             </div>
         </div>
         <div class="name">
@@ -166,11 +167,31 @@
             event.preventDefault();
             window.location.href = 'index.html';
         });
+
         function thichPost() {
         alert("Bạn đã thích nội dung này");
         }
+
+
+        function upAnh(){
+            document.getElementById('fileInput').addEventListener('change', function(event) {        
+                const file = event.target.files[0];       
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const avt = document.getElementById('avt');
+                        avt.src = e.target.result;
+                        avt.style.display = 'block';
+                        const formData = new FormData();
+                        formData.append('avt', file);
+                        fetch('/upload', {
+                            method: 'POST', body: formData}).then(response => response.json()).then(data => console.log(data)).catch(error => console.error('Error:', error));               
+                        }; 
+                        reader.readAsDataURL(file);
+                    }   
+                }
+            }
     </script>
     <script src="javascript/thongbao.js"></script>
 </body>
-
 </html>
