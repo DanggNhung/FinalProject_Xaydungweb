@@ -135,7 +135,7 @@
                         <div class="interact">
                             <button onclick="thichPost()">Thích</button>
                             <button onclick="hienBinhLuan()">Bình luận</button>
-                            <button>Chia sẻ</button>
+                            <button onclick="hienChiaSe()">Chia sẻ</button>
                         </div>
                     </div>
                 </div>
@@ -157,6 +157,16 @@
             <textarea id="commentInput" rows="4" cols="50" placeholder="Viết bình luận..."></textarea>
             <br>
             <button onclick="guiBinhLuan()">Gửi</button>
+        </div>
+    </div>
+
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="dongModal('shareModal')">&times;</span>
+            <h2>Chia sẻ bài viết</h2>
+            <button onclick="chiaSeFacebook()">Facebook</button>
+            <button onclick="chiaSeInstagram()">Instagram</button>
+            <button onclick="chiaSeTwitter()">Twitter</button>
         </div>
     </div>
     <script>
@@ -182,5 +192,6 @@
         }
     </script>
     <script src="javascript/thongbao.js"></script>
+    <script src="javascript/Trangchu.js"></script>
 </body>
 </html>
