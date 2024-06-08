@@ -12,7 +12,6 @@ function showIconPicker() {
       'fas fa-envelope',
       'fas fa-heart',
       'fas fa-comment',
-      // Thêm các icon khác tại đây
   ];
 
   // Hiển thị các icon
@@ -35,3 +34,59 @@ function showIconPicker() {
   function thichPost() {
     alert("Bạn đã thích nội dung này");
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const commentModal = document.getElementById('commentModal');
+    const shareModal = document.getElementById('shareModal');
+    const closeBtns = document.querySelectorAll('.close');
+
+    closeBtns.forEach(btn => {
+        btn.onclick = function() {
+            btn.parentElement.parentElement.style.display = 'none';
+        }
+    });
+
+    window.onclick = function(event) {
+        if (event.target == commentModal || event.target == shareModal) {
+            event.target.style.display = 'none';
+        }
+    }
+});
+
+function hienBinhLuan() {
+    const modal = document.getElementById('commentModal');
+    modal.style.display = 'flex';
+}
+
+function hienChiaSe() {
+    const modal = document.getElementById('shareModal');
+    modal.style.display = 'flex';
+}
+
+function dongModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none';
+}
+
+function guiBinhLuan() {
+    const commentInput = document.getElementById('commentInput').value;
+    if (commentInput) {
+        alert('Bình luận của bạn: ' + commentInput);
+        document.getElementById('commentInput').value = ''; // Xóa nội dung ô nhập
+        document.getElementById('commentModal').style.display = 'none'; // Đóng modal
+    } else {
+        alert('Vui lòng nhập bình luận trước khi gửi!');
+    }
+}
+
+function chiaSeFacebook() {
+    alert('Đã chia sẻ trên Facebook');
+}
+
+function chiaSeInstagram() {
+    alert('Đã chia sẻ trên Instagram');
+}
+
+function chiaSeTwitter() {
+    alert('Đã chia sẻ trên Twitter');
+}

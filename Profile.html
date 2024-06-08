@@ -134,7 +134,7 @@
                         </div>
                         <div class="interact">
                             <button onclick="thichPost()">Thích</button>
-                            <button>Bình luận</button>
+                            <button onclick="hienBinhLuan()">Bình luận</button>
                             <button>Chia sẻ</button>
                         </div>
                     </div>
@@ -150,6 +150,15 @@
         </div>
     </div>
 
+    <div id="commentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Nhập bình luận của bạn</h2>
+            <textarea id="commentInput" rows="4" cols="50" placeholder="Viết bình luận..."></textarea>
+            <br>
+            <button onclick="guiBinhLuan()">Gửi</button>
+        </div>
+    </div>
     <script>
 		document.getElementById('homeLink').addEventListener('click', function(event) {
             event.preventDefault();
@@ -171,26 +180,6 @@
         function thichPost() {
         alert("Bạn đã thích nội dung này");
         }
-
-
-        function upAnh(){
-            document.getElementById('fileInput').addEventListener('change', function(event) {        
-                const file = event.target.files[0];       
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        const avt = document.getElementById('avt');
-                        avt.src = e.target.result;
-                        avt.style.display = 'block';
-                        const formData = new FormData();
-                        formData.append('avt', file);
-                        fetch('/upload', {
-                            method: 'POST', body: formData}).then(response => response.json()).then(data => console.log(data)).catch(error => console.error('Error:', error));               
-                        }; 
-                        reader.readAsDataURL(file);
-                    }   
-                }
-            }
     </script>
     <script src="javascript/thongbao.js"></script>
 </body>
