@@ -31,8 +31,10 @@
         <div class="Picture">
             <div class="avatar">
                 <div class="avtpic">
-                    <button onclick="upAnh()"><i class="fas fa-camera"></i></button>        
-                    <input type="file" id="fileInput" accept="image/*" >
+                    <button onclick="document.getElementById('fileInput').click()">
+                        <i class="fas fa-camera"></i>
+                    </button>        
+                    <input type="file" id="fileInput" accept="image/*" style="display:none" onchange="upAnh()">
                     <img id="avt" src="*" alt="Avatar" >
                 </div>
             </div>
@@ -192,24 +194,17 @@
             }
         });
 
-        document.getElementById('fileInput').addEventListener('change', function(event) {    
-            const file = event.target.files[0];
+        function upAnh() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
             if (file) {
                 const reader = new FileReader();
                 reader.onload = function(e) {
-                    const avatar = document.getElementById('avatar');
-                    avatar.src = e.target.result;
-                    avatar.style.display = 'block';               
-                    const formData = new FormData();
-                    formData.append('avatar', file);
-
-                    fetch('/upload', {
-                        method: 'POST',
-                        body: formData
-                    }).then(response => response.json()).then(data => console.log(data)).catch(error => console.error('Error:', error));
+                    document.getElementById('avt').src = e.target.result;
                 };
                 reader.readAsDataURL(file);
             }
+        }
 
         function thichPost() {
         alert("Bạn đã thích nội dung này");
