@@ -20,7 +20,7 @@
             <ul>
                 <li><a href="Trangchu.html" id="homeLink">Trang chủ</a></li>
                 <li><a href="#" id="notificationBtn">Thông báo</a></li>
-				<li><a href="message-box" id="messageLink">Tin nhắn</a><li>
+                <li><a href="Messenger.html" id="messageLink">Tin nhắn</a><li>
                 <li><a href="profile.html" id="profileLink">Hồ sơ</a></li>
                 <li><a href="index.html" id="logoutLink">Đăng xuất</a></li>
             </ul>
@@ -185,7 +185,7 @@
             window.location.href = 'index.html';
         });
 
-        document.getElementById('bioButton').addEventListener('click', function() {
+        document.getElementById('bioButton').addEventListener('click', function(event) {
             var userInput = prompt('Vui lòng nhập tiểu sử:');
             if (userInput !== null) {
                 document.getElementById('output-bio').textContent = userInput;
@@ -209,7 +209,7 @@
                     }).then(response => response.json()).then(data => console.log(data)).catch(error => console.error('Error:', error));
                 };
                 reader.readAsDataURL(file);
-            }
+            });
 
         function thichPost() {
         alert("Bạn đã thích nội dung này");

@@ -90,3 +90,7 @@ function chiaSeInstagram() {
 function chiaSeTwitter() {
     alert('Đã chia sẻ trên Twitter');
 }
+
+function dangPost() {
+    alert("Bài viết của bạn đã được đăng");
+  }
