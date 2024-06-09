@@ -83,7 +83,7 @@ main {
     display: flex;
     width: 100%;
     height: 90vh;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .tool{
@@ -151,15 +151,22 @@ main {
     align-items: center;
 }
 
+.post img{
+    object-fit: cover;
+    height: 800px;
+    width: 800px;
+}
+
 .post-header img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
+    object-fit: cover;
+    max-height: 800px; 
+    max-width: 800px; 
 }
 
 .post-content {
     margin-top: 10px;
+    width: auto;
+    height: auto;
 }
 
 .post-actions button {
@@ -341,11 +348,23 @@ main {
 
                 <div class="post2">
                     <div class="post-header">
-                        <img src="">
-                        <h2>Tên người dùng</h2>
+                        <h2>Kyu._n</h2>
                     </div>
                     <div class="post-content">
-                        <p>Nội dung bài đăng...</p>
+                        <div class="post img">
+                            <img src="images/prf.jpg">  
+                        </div>
+
+                        <p>Tiramisu mọi người oiiiii, nhà tớ có hai vị:</p>
+                            <p> - Nguyên bản</p>
+                            <p>   - Trái cây nhiệt đới</p>
+                            <p>    Nói tới vị nguyên bản thì có lẽ mọi người cũng có thể tưởng tượng ra lớp bánh lady fingers mềm, ẩm thơm mùi cafe pha với hương rượu Rhum xen kẽ với lớp kem phô mai Mascarpone béo ngậy, man mát được quyện cùng vị cacao đắng nhẹ được rải ở mặt trên cùng của chiếc bánh.</p>
+                            <p>    Phiên bản trái cây nhiệt đới được phá cách với lớp bánh dậy mùi hương trái cây cùng từng tầng hương chanh leo và dứa chua nhẹ và vị ngọt thanh tự nhiên từ hoa quả tươi và lớp mứt phúc bồn tử làm cân bằng hơn về vị beo béo, ngầy ngậy của lớp kem phô mai.</p>
+                            <p>    Nhà tớ hiện có size bánh 13x9.5x6(cm) với giá 60k cho vị nguyên bản và 65k cho vị hoa quả nhiệt đới.</p>
+                            <p>    Có cả size nhỏ 4.2x4.2x4.5 với giá 30k cho vị nguyên bản và 35k cho vị hoa quả ạa</p>
+                            <p>    Tớ nhận đơn trong hôm nay và mai sẽ trả đơn ạ. Freeship bán kính 2km và trong trường P.</p>
+                            <p>    Tớ ở Nghĩa Lộ, Yên Nghĩa</p>
+                            <p>    Sđt:0852009456</p>
                     </div>
                     <div class="post-actions">
                         <button onclick="thichPost()"><i class="material-icons">thumb_up</i></button>
