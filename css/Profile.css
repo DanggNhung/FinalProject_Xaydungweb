@@ -68,6 +68,7 @@ nav ul li a {
 }
 
 .head {
+    position: relative;
     display: flex;
     margin: 0px;
     background-color: #fff;
@@ -170,6 +171,9 @@ nav ul li a {
     object-fit: cover;
     border-radius: 50%;
 }
+#avt img{
+    z-index: 10;
+}
 .avatar img {
     margin-top: 5px;
     margin-left: 5px;
@@ -221,6 +225,24 @@ nav ul li a {
     padding-top: 0.1px;
     margin-left: 1.5rem;
     border-radius: 10px;
+}
+#bioButton{
+    font-weight: bold;
+    background-color: #ddd;
+    height: 3rem;
+    width: 22rem;
+    text-align: center;
+    padding-top: 0.1px;
+    border-radius: 10px;
+    border: none;
+}
+#output-bio{
+    font-weight: bold;
+    background-color: #ffffff;
+    height: 3rem;
+    width: 22rem;
+    text-align: center;
+    margin-top: 20px;
 }
 .details{
     margin-top: 100px;
