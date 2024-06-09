@@ -132,8 +132,10 @@ nav ul li a {
     height: 70px;
     width: 75px;
     border: none;
+    z-index: 10;
 }
 .avatar {
+    position: relative;
     margin-top: 35px;
     margin-left: 60px;
     justify-content: center;
@@ -157,6 +159,7 @@ nav ul li a {
 }
 
 .avtpic i {
+    z-index: 10;
     margin-top: 4px;
     margin-left: 5px;
     font-size: 44px;
@@ -170,19 +173,9 @@ nav ul li a {
     height: 270px;
     object-fit: cover;
     border-radius: 50%;
+    transform: translate(-230px, -30px);
 }
-#avt img{
-    z-index: 10;
-}
-.avatar img {
-    margin-top: 5px;
-    margin-left: 5px;
-    display: block;
-    width: 270px;
-    height: 270px;
-    object-fit: cover;
-    border-radius: 50%;
-}
+
 .name{
     margin-left: 20px;
     text-align: left;
