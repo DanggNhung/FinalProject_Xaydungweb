@@ -33,7 +33,7 @@
                 <div class="avtpic">
                     <button onclick="upAnh()"><i class="fas fa-camera"></i></button>        
                     <input type="file" id="fileInput" accept="image/*" >
-                    <img id="avt" src="" alt="Avatar">
+                    <img id="avt" src="*" alt="Avatar" >
                 </div>
             </div>
         </div>
@@ -69,7 +69,8 @@
                     <h2>Giới thiệu</h2>
                 </div>
                 <div class="bio">
-                    <p>Thêm tiểu sử</p>
+                    <button id="bioButton">Thêm tiểu sử</button>
+                    <div id="output-bio"></div>
                 </div>
                 <div class="details">
                     <p>Chỉnh sửa chi tiết hiển thị</p>
@@ -183,6 +184,32 @@
             event.preventDefault();
             window.location.href = 'index.html';
         });
+
+        document.getElementById('bioButton').addEventListener('click', function() {
+            var userInput = prompt('Vui lòng nhập tiểu sử:');
+            if (userInput !== null) {
+                document.getElementById('output-bio').textContent = userInput;
+            }
+        });
+
+        document.getElementById('fileInput').addEventListener('change', function(event) {    
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const avatar = document.getElementById('avatar');
+                    avatar.src = e.target.result;
+                    avatar.style.display = 'block';               
+                    const formData = new FormData();
+                    formData.append('avatar', file);
+
+                    fetch('/upload', {
+                        method: 'POST',
+                        body: formData
+                    }).then(response => response.json()).then(data => console.log(data)).catch(error => console.error('Error:', error));
+                };
+                reader.readAsDataURL(file);
+            }
 
         function thichPost() {
         alert("Bạn đã thích nội dung này");
