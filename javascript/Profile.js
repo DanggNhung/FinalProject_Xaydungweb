@@ -21,7 +21,25 @@ document.getElementById('bioButton').addEventListener('click', function(event) {
         document.getElementById('output-bio').textContent = userInput;
     }
 });
+document.getElementById("bioButton").onclick = function() {
+    document.getElementById("bioModal").style.display = "block";
+};
 
+document.getElementsByClassName("close")[0].onclick = function() {
+    document.getElementById("bioModal").style.display = "none";
+};
+
+document.getElementById("saveBioButton").onclick = function() {
+    var bioText = document.getElementById("bioInput").value;
+    document.getElementById("output-bio").innerText = bioText;
+    document.getElementById("bioModal").style.display = "none";
+};
+
+window.onclick = function(event) {
+    if (event.target == document.getElementById("bioModal")) {
+        document.getElementById("bioModal").style.display = "none";
+    }
+};
 function upAnh() {
     const fileInput = document.getElementById('fileInput');
     const file = fileInput.files[0];
